@@ -46,9 +46,9 @@ router.get('/drones/:id/edit', async(req, res, next) => {
 router.post('/drones/:id/edit', async(req, res, next) => {
     // Iteration #4: Update the drone
     // ... your code here
-    const { movieId } = req.params
-    await DroneModel.findByIdAndUpdate(movieId, req.body)
-    res.redirect(`/movies/${movieId}`)
+    const { droneId } = req.params
+    await DroneModel.findByIdAndUpdate(droneId, req.body)
+    res.redirect(`/drones/${movieId}`)
 });
 
 router.post('/drones/:id/delete', async(req, res, next) => {
